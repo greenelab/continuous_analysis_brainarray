@@ -13,10 +13,12 @@ The truncated output shows the first 100 genes for comparison.
 
 [V19 -> V20]
 Change: (https://github.com/greenelab/continuous_analysis_brainarray/commit/c969c281c9a55b8418a2115e74c1ff010bd19d86)
+
 Result:(https://github.com/greenelab/continuous_analysis_brainarray/commit/443e8123ca9baa0b72d03c23dc07933ba1a3b5de)
 
 [V18 -> V19]
 Change: (https://github.com/greenelab/continuous_analysis_brainarray/commit/fc782b9dcc16a60f828cf94e597825b3fcec1513)
+
 Result:(https://github.com/greenelab/continuous_analysis_brainarray/commit/55a63b83b1ee53a89c61a2d7c831f6ad74297620)
 
 ## Feedback
