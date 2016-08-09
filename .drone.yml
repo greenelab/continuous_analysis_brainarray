@@ -1,5 +1,5 @@
 build:
-  image: brettbj/continuous_analysis_brainarray_v18
+  image: brettbj/continuous_analysis_brainarray_v19
   commands:
     - git status
     - tar -xvf /data/GSE47664_RAW.tar 
@@ -16,12 +16,12 @@ build:
     - git remote set-url origin https://github.com/greenelab/continuous_analysis_brainarray.git
 
     - git checkout master
+    - git add results
+    - git commit -a -m "Drone Build [skip ci] [ci skip]"
     - git remote set-url origin https://brettbj:$$git_publish_key@github.com/greenelab/continuous_analysis_brainarray.git
     - git fetch
     - git branch --set-upstream-to=origin/master master
-    - git pull
-    - git add results
-    - git commit -a -m "Drone Build [skip ci] [ci skip]"
+    - git pull -s recursive -X theirs
     - git push 
 
 branches:
