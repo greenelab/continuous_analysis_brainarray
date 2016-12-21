@@ -1,5 +1,5 @@
 build:
-  image: brettbj/continuous_analysis_brainarray_v18
+  image: brettbj/continuous_analysis_brainarray_v19
   commands:
     - git status
     - tar -xvf /data/GSE47664_RAW.tar 
