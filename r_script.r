@@ -11,7 +11,9 @@ stats=mt.teststat(rma.exprs, groups, test="t")
 rawp=2*(1-pnorm(abs(stats)))
 adjp=p.adjust(rawp, method="bonferroni")
 arraysRMAstats=cbind(rma.exprs[-1,0], adjp)
-trunc_stats = head(arraysRMAstats, n=100)
 
-write.table(trunc_stats, file="truncated_output.csv", sep=",", col.names = FALSE)
-write.table(arraysRMAstats, file="output.csv", sep=",", col.names = FALSE)
+output = cbind(rma.exprs[-1, 0], rawp, adjp, stats)
+trunc_ouptput= head(output, n=100)
+
+write.table(trunc_ouptput, file="truncated_output.csv", sep=",", col.names = TRUE)
+write.table(output, file="output.csv", sep=",", col.names = TRUE)
